@@ -56,6 +56,9 @@
                 <column id="active"/>
                 <column id="address"/>
                 <column id="needsActivation"/>
+                <column id="activationToken"/>
+                <column id="createdDate"/>
+                <column id="expiryDate"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"

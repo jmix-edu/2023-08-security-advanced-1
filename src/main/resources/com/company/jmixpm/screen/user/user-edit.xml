@@ -41,6 +41,9 @@
                 <textField id="emailField" property="email"/>
                 <checkBox id="activeField" property="active"/>
                 <textField id="addressField" property="address"/>
+                <dateField id="createdDateField" property="createdDate"/>
+                <checkBox id="needsActivationField" property="needsActivation"/>
+                <dateField id="expiryDateField" property="expiryDate"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

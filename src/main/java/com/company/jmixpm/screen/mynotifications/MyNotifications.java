@@ -1,5 +1,6 @@
 package com.company.jmixpm.screen.mynotifications;
 
+import com.company.jmixpm.app.NotificationService;
 import com.company.jmixpm.entity.Notification;
 import com.company.jmixpm.entity.User;
 import io.jmix.core.DataManager;
@@ -25,6 +26,8 @@ public class MyNotifications extends Screen {
     private CollectionLoader<Notification> notificationsDl;
     @Autowired
     private CurrentAuthentication currentAuthentication;
+    @Autowired
+    private NotificationService notificationService;
 
     @Subscribe
     public void onBeforeShow(BeforeShowEvent event) {
@@ -41,9 +44,13 @@ public class MyNotifications extends Screen {
         }
 
         // set isRead
-        item.setIsRead(true);
+//        item.setIsRead(true);
         // save changes
-        dataManager.save(item);
+//        dataManager.save(item);
+
+//        notificationService.markAsRead(item);
+        notificationService.markAsReadEm(item);
+
 
         // reload the table
         notificationsDl.load();
